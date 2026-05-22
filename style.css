@@ -1,0 +1,245 @@
+:root{
+    --pri: #AD8B73;
+    --sec: #CEAB93;
+    --tri:#E3CAA5;
+    --tri2: #f8f3f3;
+}
+
+@font-face {
+    font-family: anko;
+    src: url(./anko-personal-use-family/anko-personal-use.regular.otf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: anko;
+    src: url(./anko-personal-use-family/anko-personal-use.medium.otf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: anko;
+    src: url(./anko-personal-use-family/anko-personal-use.semi-bold.otf);
+    font-weight: 700;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif; /* Example font */
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: var(--pri);
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+    background-color: var(--tri2);
+    position: fixed;
+}
+
+section.allelem{
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: absolute;
+     
+}
+
+.elem{
+    height: 400px;
+    width: 330px;
+    background-color: rgb(244, 244, 166);
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    font-size: 15px;
+    color: whitesmoke;
+    transition: all ease 0.2s ; 
+}
+
+.elem img{
+    width: 100%;
+    height: 100%;
+}
+
+.elem h1{
+    position: absolute;
+    bottom: 5%;
+    right: 8%;
+    text-shadow: 2px 2px 5px black;
+    font-family: anko;
+    font-weight: 200;
+}
+.elem:active{
+    scale: 0.97;
+}
+
+.fullelem{
+    height: 100%;
+    width: 100%;
+    background-color: var(--pri);
+    display: none;
+    position: absolute;
+    padding: 30px;
+    top: 0;
+    left: 0;
+}
+.back{
+    position: absolute;
+    right: 2%;
+    top: 1.5%;
+    padding: 15px 20px;
+    font-weight: 600;
+    font-size: 25px;
+    border-radius: 8px;
+    border: none;
+    color: rgb(255, 243, 243);
+    background-color:#eb6060c1;
+    transition: all 0.3s ease ;   
+}
+.back:active{
+    scale: 0.90;
+}
+
+.todolist-fullPage{
+     display: block;
+    justify-content: space-between;
+}
+.todolist-fullPage h1{
+    font-size: 50px;
+    color: var(--tri2);
+} 
+
+.todolist-fullPage .todo-container{
+    height: 90%;
+    width: calc(100% -40px);
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.todolist-fullPage .todo-container .add-todo{
+    width: 33%; 
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--tri);
+    border-radius: 30px;
+}
+
+ .add-todo form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+.add-todo input{
+    padding: 20px 25px;
+    font-size: 20px;
+    outline: none;
+     
+}
+
+.add-todo textarea{
+    font-size: 20px;
+    padding: 20px;
+    height: 80%;
+    outline: none;
+}
+.add-todo button{
+    background-color: #fdf15092;
+    padding: 15px 20px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 10px;
+    color: var(--tri2);
+    text-shadow: 0px 0px 4px black;
+    transition: all 0.2s ease;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.add-todo button :active{
+    scale: 0.98;  
+}
+.todolist-fullPage .todo-container .addtask{
+    background-color: var(--tri);
+    width: 65%;
+    padding: 20px;
+    border-radius: 30px;
+    overflow: auto;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.addtask .tasks{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px 20px;
+     border-radius: 20px;
+     background-color: var(--sec);
+     
+}
+
+.tasks h5{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--tri2);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.tasks h5 span{
+    font-size: 11px;
+    padding: 4px 4px;
+    font-weight: 600;
+    border-radius: 50px;
+    background-color: red;
+}
+.tasks h5 span.true{
+    opacity: 1;
+}
+.tasks h5 span.false{
+    opacity: 0;
+}
+
+.addtask .tasks button{
+    font-size: 22px;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 15px;
+    border: none;
+    color: var(--tri2);
+    background-color: rgb(75, 232, 96);
+}
+.mark-imp{
+    display: flex;
+    padding: 0px 5px;
+    gap: 20px;
+}
+.mark-imp #checkbox{
+    scale: 1.8;
+}
+.mark-imp label{
+    font-size: 20px;
+    color: var(--tri2);
+    text-shadow: 5px 5px 30px black;
+}
